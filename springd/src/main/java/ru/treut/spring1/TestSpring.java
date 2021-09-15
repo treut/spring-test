@@ -11,13 +11,19 @@ public class TestSpring {
 
 
 
-        TestBean testBean = context.getBean("testBean", TestBean.class);
+        //TestBean testBean = context.getBean("testBean", TestBean.class);
+        Music music = context.getBean("musicBean", Music.class);
+
+
+
+        MusicPlayer mp = new MusicPlayer(music);
+        mp.playMusic();
         //while(true){
-            try{
+            /*try{
                 Thread.sleep(100);
                 System.out.println(testBean.getName());
             }
-            catch(Exception e){}
+            catch(Exception e){}*/
         //}
         context.close();
     }

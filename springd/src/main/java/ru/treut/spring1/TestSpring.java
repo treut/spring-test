@@ -9,15 +9,16 @@ public class TestSpring {
     public static void main(String args[]){
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-
-
         //TestBean testBean = context.getBean("testBean", TestBean.class);
-        Music music = context.getBean("musicBean", Music.class);
+
+        //Music music = context.getBean("musicBean", Music.class);
+        //MusicPlayer mp = new MusicPlayer(music);
 
 
-
-        MusicPlayer mp = new MusicPlayer(music);
+        MusicPlayer mp = context.getBean("musicPlayer", MusicPlayer.class);
         mp.playMusic();
+
+
         //while(true){
             /*try{
                 Thread.sleep(100);

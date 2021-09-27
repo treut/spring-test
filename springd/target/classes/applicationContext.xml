@@ -7,10 +7,14 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:variables.properties"/>
+
    <!--bean id="testBean"
          class="ru.treut.spring1.TestBean">
        <constructor-arg value="Neilxcdfsdfasdfasdfsdf"/>
    </bean-->
+
+
 
     <bean id="musicBean"
         class="ru.treut.spring1.ClassicalMusic">
@@ -18,7 +22,14 @@
 
     <bean id="musicPlayer"
         class="ru.treut.spring1.MusicPlayer">
-        <constructor-arg ref="musicBean"/>
+        <!--constructor-arg ref="musicBean"/-->
+        <property name="music" ref="musicBean"/>
+
+        <!--property name="name" value="namesa"/>
+        <property name="volume" value="50"/-->
+
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
 
 </beans>

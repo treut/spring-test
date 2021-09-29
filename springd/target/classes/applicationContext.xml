@@ -7,34 +7,28 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:variables.properties"/>
-
-   <!--bean id="testBean"
+    <context:component-scan base-package="ru.treut.spring1"/>
+    <!--context:property-placeholder location="classpath:variables.properties"/>
+   <bean id="testBean"
          class="ru.treut.spring1.TestBean">
        <constructor-arg value="Neilxcdfsdfasdfasdfsdf"/>
    </bean-->
-
-<!-- scope="prototype" -->
-
-    <bean
+    <!-- scope="prototype" -->
+    <!--property name="name" value="namesa"/>
+    <property name="volume" value="50"/-->
+    <!--constructor-arg ref="musicBean"/-->
+    <!--bean
         id="musicBean"
         class="ru.treut.spring1.ClassicalMusic"
         init-method="doInit"
         destroy-method="doDestroy"
-        factory-method="getClassicalMusic"
-    >
+        factory-method="getClassicalMusic">
     </bean>
-
     <bean id="musicPlayer"
         class="ru.treut.spring1.MusicPlayer">
-        <!--constructor-arg ref="musicBean"/-->
         <property name="music" ref="musicBean"/>
-
-        <!--property name="name" value="namesa"/>
-        <property name="volume" value="50"/-->
-
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
+    </bean-->
 
 </beans>

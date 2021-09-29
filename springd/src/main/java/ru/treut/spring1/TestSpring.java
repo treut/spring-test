@@ -11,12 +11,13 @@ public class TestSpring {
 
         //TestBean testBean = context.getBean("testBean", TestBean.class);
 
-        //Music music = context.getBean("musicBean", Music.class);
-        //MusicPlayer mp = new MusicPlayer(music);
+        Music music = context.getBean("musicBean", Music.class);
+        MusicPlayer mp = new MusicPlayer(music);
+        mp.playMusic();
 
 
-        ClassicalMusic cm = context.getBean("musicBean", ClassicalMusic.class);
-        System.out.println(cm.getSong());
+        /** ClassicalMusic cm = context.getBean("musicBean", ClassicalMusic.class);
+        System.out.println(cm.getSong());*/
 
 
 //        MusicPlayer mp = context.getBean("musicPlayer", MusicPlayer.class);

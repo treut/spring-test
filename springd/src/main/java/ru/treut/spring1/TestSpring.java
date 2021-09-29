@@ -15,11 +15,15 @@ public class TestSpring {
         //MusicPlayer mp = new MusicPlayer(music);
 
 
-        MusicPlayer mp = context.getBean("musicPlayer", MusicPlayer.class);
-        mp.playMusic();
+        ClassicalMusic cm = context.getBean("musicBean", ClassicalMusic.class);
+        System.out.println(cm.getSong());
 
-        System.out.println(mp.getName());
-        System.out.println(mp.getVolume());
+
+//        MusicPlayer mp = context.getBean("musicPlayer", MusicPlayer.class);
+//        mp.playMusic();
+//
+//        System.out.println(mp.getName());
+//        System.out.println(mp.getVolume());
 
 
         //while(true){

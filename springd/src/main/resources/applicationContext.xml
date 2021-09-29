@@ -14,10 +14,15 @@
        <constructor-arg value="Neilxcdfsdfasdfasdfsdf"/>
    </bean-->
 
+<!-- scope="prototype" -->
 
-
-    <bean id="musicBean"
-        class="ru.treut.spring1.ClassicalMusic">
+    <bean
+        id="musicBean"
+        class="ru.treut.spring1.ClassicalMusic"
+        init-method="doInit"
+        destroy-method="doDestroy"
+        factory-method="getClassicalMusic"
+    >
     </bean>
 
     <bean id="musicPlayer"

@@ -8,9 +8,8 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <bean id="tbean"
-    class="ru.treut.spr1.TBean">
-        <constructor-arg value="treut"/>
+    <bean id="mBean"
+    class="ru.treut.spr1.CMusic">
     </bean>
 
 

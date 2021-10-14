@@ -1,10 +1,8 @@
 package ru.treut.spring1;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.stereotype.Controller;
 
 
-//@Controller
 public class TestSpring {
     public static void main(String args[]){
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
@@ -35,5 +33,6 @@ public class TestSpring {
             catch(Exception e){}*/
         //}
         context.close();
+
     }
 }

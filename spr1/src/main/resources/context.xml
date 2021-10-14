@@ -9,7 +9,12 @@
 
 
     <bean id="mBean"
-    class="ru.treut.spr1.CMusic">
+    class="ru.treut.spr1.RMusic">
+    </bean>
+
+    <bean id="player"
+          class="ru.treut.spr1.Player">
+        <constructor-arg ref="mBean"/>
     </bean>
 
 

@@ -10,17 +10,20 @@
     <context:property-placeholder location="classpath:data.properties"/>
 
     <bean id="mBean"
-    class="ru.treut.spr1.RMusic">
+        class="ru.treut.spr1.RMusic"
+        init-method="inita"
+        destroy-method="destro">
     </bean>
 
-    <bean id="player"
-          class="ru.treut.spr1.Player">
-        <!--constructor-arg ref="mBean"/-->
-        <property name="music" ref="mBean"/>
+<!--    <bean id="player"-->
+<!--          scope="prototype"-->
+<!--          class="ru.treut.spr1.Player">-->
+<!--        &lt;!&ndash;constructor-arg ref="mBean"/&ndash;&gt;-->
+<!--        <property name="music" ref="mBean"/>-->
 
-        <property name="name" value="${player.name}"/>
-        <property name="volume" value="${player.volume}"/>
-    </bean>
+<!--        <property name="name" value="${player.name}"/>-->
+<!--        <property name="volume" value="${player.volume}"/>-->
+<!--    </bean>-->
 
 
 </beans>

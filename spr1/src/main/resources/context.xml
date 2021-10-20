@@ -14,7 +14,8 @@
 
     <bean id="player"
           class="ru.treut.spr1.Player">
-        <constructor-arg ref="mBean"/>
+        <!--constructor-arg ref="mBean"/-->
+        <property name="music" ref="mBean"/>
     </bean>
 
 

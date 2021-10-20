@@ -7,6 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:property-placeholder location="classpath:data.properties"/>
 
     <bean id="mBean"
     class="ru.treut.spr1.RMusic">
@@ -17,8 +18,8 @@
         <!--constructor-arg ref="mBean"/-->
         <property name="music" ref="mBean"/>
 
-        <property name="name" value="Hundulgu"/>
-        <property name="volume" value="55"/>
+        <property name="name" value="${player.name}"/>
+        <property name="volume" value="${player.volume}"/>
     </bean>
 
 

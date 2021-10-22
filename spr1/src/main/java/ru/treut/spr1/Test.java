@@ -6,7 +6,7 @@ public class Test {
     public static void main(String[] args){
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
 
-        RMusic rm=context.getBean("mBean", RMusic.class);
+        Music rm=context.getBean("mBean", Music.class);
 
         System.out.println(rm.getSong());
 

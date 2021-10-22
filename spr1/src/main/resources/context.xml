@@ -12,7 +12,8 @@
     <bean id="mBean"
         class="ru.treut.spr1.RMusic"
         init-method="inita"
-        destroy-method="destro">
+        destroy-method="destro"
+        factory-method="getRMusic" >
     </bean>
 
 <!--    <bean id="player"-->

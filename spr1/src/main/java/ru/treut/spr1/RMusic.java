@@ -2,6 +2,12 @@ package ru.treut.spr1;
 
 public class RMusic implements Music{
 
+    private RMusic(){}
+
+    public static RMusic getRMusic(){
+        return new RMusic();
+    }
+
     public void inita(){
         System.out.println("Initialization");
     }

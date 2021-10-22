@@ -10,6 +10,7 @@ public class Test {
 
         System.out.println(rm.getSong());
 
+
 //        Music mb = context.getBean("mBean", Music.class);
 //        Player mp=new Player(mb);
 

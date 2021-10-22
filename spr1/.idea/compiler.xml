@@ -9,5 +9,8 @@
         <module name="spr1" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spr1" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

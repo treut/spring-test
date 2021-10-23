@@ -1,75 +1,28 @@
 package ru.treut.spr1;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Player {
+//    @Autowired
+//    @Qualifier("CMusic")
 //    private Music music;
 
+    private Music m1;
+    private Music m2;
+
     @Autowired
-    private CMusic cmusic;
-    @Autowired
-    private RMusic rmusic;
+    public Player(@Qualifier("RMusic") Music m1, @Qualifier("CMusic") Music m2){
+        this.m1=m1;
+        this.m2=m2;
+    }
 
-
-//    @Autowired
-//    public Player(CMusic cmusic, RMusic rmusic){
-//        this.cmusic=cmusic;
-//        this.rmusic=rmusic;
-//    }
-
-
-
-//    @Autowired
-//    private Music music;
-
-//    private String name;
-//    private int volume;
-//
-//    public void setName(String name){
-//        this.name=name;
-//    }
-//    public String getName(){
-//        return name;
-//    }
-//    public void setVolume(int volume){
-//        this.volume=volume;
-//    }
-//    public int getVolume(){
-//        return volume;
-//    }
-
-
-
-
-
-    // IOC
-//    @Autowired
-//    public Player(Music music){
-//        this.music=music;
-//    }
-//
-
-//    @Autowired
-//    public void setMusic(Music music){
-//        this.music=music;
-//    }
-
-
-
-
-
-
-//    public Player(){}
-
-//    public void setMusic(Music music){
-//        this.music=music;
-//    }
 
 
     public void playMusic(){
-        System.out.println("Playing: "+cmusic.getSong());
-        System.out.println("Playing: "+rmusic.getSong());
+//        System.out.println("Playing: "+music.getSong());
+        System.out.println("Playing: "+m1.getSong()+" & "+m2.getSong());
     }
 }

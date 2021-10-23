@@ -22,6 +22,9 @@ public class Test {
 
         Player pp=context.getBean("player", Player.class);
         pp.playMusic();
+        System.out.println(pp.getName());
+        System.out.println(pp.getVolume());
         context.close();
+
     }
 }

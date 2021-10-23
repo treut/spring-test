@@ -3,7 +3,6 @@ package ru.treut.spr1;
 import org.springframework.stereotype.Component;
 
 
-//@Component("mBean")
 @Component
 public class RMusic implements Music{
 

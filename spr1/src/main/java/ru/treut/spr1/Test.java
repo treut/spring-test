@@ -6,9 +6,9 @@ public class Test {
     public static void main(String[] args){
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("context.xml");
 
-        Music rm=context.getBean("mBean", Music.class);
+//        Music rm=context.getBean("mBean", Music.class);
 
-        System.out.println(rm.getSong());
+//        System.out.println(rm.getSong());
 
 
 //        Music mb = context.getBean("mBean", Music.class);
@@ -20,6 +20,8 @@ public class Test {
 //        System.out.println(mp.getName());
 //        System.out.println(mp.getVolume());
 
+        Player pp=context.getBean("player", Player.class);
+        pp.playMusic();
         context.close();
     }
 }

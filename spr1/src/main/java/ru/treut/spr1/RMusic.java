@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 
 
 //@Component("mBean")
+@Component
 public class RMusic implements Music{
 
 //    private RMusic(){}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>NEWWW</title>
+</head>
+<body>
+
+<form th:method="POST" th:action="@{/people}" th:object="${person}">
+  Name:<br><input type="text" th:field="*{name}">
+  <br>
+  <input type="submit" value="create">
+</form>
+
+</body>
+</html>

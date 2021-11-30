@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>All peoples</title>
 </head>
 <body>
-
+привает
 <div th:each="person : ${people}">
   <a th:href="@{/people/{id}(id=${person.getId()})}" th:text="${person.getName()}">username</a><br>
 </div>

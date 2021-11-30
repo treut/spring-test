@@ -44,10 +44,18 @@ public class SpringConfig implements WebMvcConfigurer {
         return templateEngine;
     }
 
-    @Override
-    public void configureViewResolvers(ViewResolverRegistry registry){
+    @Bean
+    public ThymeleafViewResolver thymeleafViewResolver() {
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
         resolver.setTemplateEngine(templateEngine());
-        registry.viewResolver(resolver);
+        resolver.setCharacterEncoding("UTF-8");
+        return resolver;
     }
+
+//    @Override
+//    public void configureViewResolvers(ViewResolverRegistry registry){
+//        ThymeleafViewResolver resolver = new ThymeleafViewResolver();
+//        resolver.setTemplateEngine(templateEngine());
+//        registry.viewResolver(resolver);
+//    }
 }

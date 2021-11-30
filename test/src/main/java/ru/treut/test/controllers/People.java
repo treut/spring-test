@@ -8,14 +8,16 @@ import org.springframework.web.bind.annotation.*;
 import ru.treut.test.dao.PersonDAO;
 import ru.treut.test.models.Person;
 
+import java.nio.charset.Charset;
+
 @Controller
 @RequestMapping("/people")
 public class People {
-
     private final PersonDAO personDAO;
 
     public People(PersonDAO personDAO) {
         this.personDAO = personDAO;
+        System.out.println("My project encoding is : "+ Charset.defaultCharset());
     }
 
     @GetMapping()
